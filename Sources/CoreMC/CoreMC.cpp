@@ -1,3 +1,4 @@
+#define F_CPU 20000000UL
 #include <avr/io.h>
 #include <avr/interrupt.h>
 #include <math.h>
@@ -18,7 +19,7 @@ struct dataexchange_t       // Описание структуры для передачи данных
 struct dataexchange_t pdata = {0, 0, 0};
 
 
-PROGMEM char usbHidReportDescriptor[22] = { // USB report descriptor         // Дескриптор описывает структуру пакета данных для обмена
+PROGMEM const char usbHidReportDescriptor[22] = { // USB report descriptor         // Дескриптор описывает структуру пакета данных для обмена
     0x06, 0x00, 0xff,                       // USAGE_PAGE (Generic Desktop)
     0x09, 0x01,                             // USAGE (Vendor Usage 1)
     0xa1, 0x01,                             // COLLECTION (Application)
@@ -127,7 +128,7 @@ uchar   usbFunctionWrite(uchar *data, uchar len)
 
 usbMsgLen_t usbFunctionSetup(uchar data[8])
 {
-usbRequest_t    *rq = (void *)data;
+usbRequest_t    *rq = static_cast<usbRequest_t*>((void*)data);
 
     if((rq->bmRequestType & USBRQ_TYPE_MASK) == USBRQ_TYPE_CLASS){    /* HID устройство */
         if(rq->bRequest == USBRQ_HID_GET_REPORT){  /* wValue: ReportType (highbyte), ReportID (lowbyte) */

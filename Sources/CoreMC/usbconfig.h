@@ -24,7 +24,7 @@
 
 /* ------------------------- Аппаратные настройки -------------------------- */
 
-#define USB_CFG_IOPORTNAME      D
+#define USB_CFG_IOPORTNAME      B
 /* Указан порт, к которому подключена шина USB. Если Вы сконфигурируете "B",
  * будут использоваться регистры PORTB, PINB и DDRB.
  */
@@ -238,8 +238,8 @@
 #define USB_CFG_DEVICE_VERSION  0x00, 0x01
 /* Номер версии устройства: сначала младший номер, затем старший номер.
  */
-#define USB_CFG_VENDOR_NAME     'w', 'e', '.', 'p', 'a', 'v', 'a', '.', 'r', 'u'
-#define USB_CFG_VENDOR_NAME_LEN 10
+#define USB_CFG_VENDOR_NAME     'w', 'e', '.', 'e', 'a', 's', 'y', 'e', 'l', 'e', 'c', 't', 'r', 'o', 'n', 'i', 'c', 's', '.', 'r', 'u'
+#define USB_CFG_VENDOR_NAME_LEN 21
 /* Здесь указывают имя вендора (vendor name), возвращаемое устройством.
  * Имя должно предоставляться как список символов в одиночных
  * кавычках, а USB_CFG_VENDOR_NAME_LEN задает их количество. Символы
@@ -248,8 +248,8 @@
  * доменное имя Internet, если Вы используете свободно распространяемую пару
  * obdev VID/PID. За деталями обращайтесь к файлу USB-IDs-for-free.txt.
  */
-#define USB_CFG_DEVICE_NAME     'B', 'u', 'i', 'l', 'd', 'O', 'r', 'b'
-#define USB_CFG_DEVICE_NAME_LEN 8
+#define USB_CFG_DEVICE_NAME     'H', 'i', 'd', ' ', 'e', 'x', 'a', 'm', 'p', 'l', 'e'
+#define USB_CFG_DEVICE_NAME_LEN 11
 /* Здесь указывается имя устройства (device name) таким же способом, как и в
  * предыдущем параметре указывается имя вендора. Если Вам не нужно имя
  * устройства, закомментируйте этот макрос. См. файл USB-IDs-for-free.txt
