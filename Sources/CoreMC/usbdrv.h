@@ -193,7 +193,7 @@ extern usbMsgPtr_t usbMsgPtr;
  * implementation of usbFunctionWrite(). It is also used internally by the
  * driver for standard control requests.
  */
-USB_PUBLIC usbMsgLen_t usbFunctionSetup(uchar data[8]);
+USB_PUBLIC extern usbMsgLen_t usbFunctionSetup(uchar data[8]);
 /* This function is called when the driver receives a SETUP transaction from
  * the host which is not answered by the driver itself (in practice: class and
  * vendor requests). All control transfers start with a SETUP transaction where

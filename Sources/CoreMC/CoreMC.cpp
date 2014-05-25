@@ -1,4 +1,3 @@
-#define F_CPU 20000000UL
 #include <avr/io.h>
 #include <avr/interrupt.h>
 #include <math.h>
