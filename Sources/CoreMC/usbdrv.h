@@ -9,6 +9,11 @@
 
 #ifndef __usbdrv_h_included__
 #define __usbdrv_h_included__
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include "usbconfig.h"
 #include "usbportability.h"
 
@@ -742,5 +747,9 @@ typedef struct usbRequest{
 #define USBRQ_HID_SET_PROTOCOL  0x0b
 
 /* ------------------------------------------------------------------------- */
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* __usbdrv_h_included__ */

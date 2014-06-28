@@ -10,4 +10,5 @@ unit tests/release
 *.o
 *.pdb
 ~*.*
+*.obj
 _ReSharper.*/
