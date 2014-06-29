@@ -38,6 +38,9 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <NMakeOutput>Orbman.exe</NMakeOutput>
     <NMakePreprocessorDefinitions>WIN32;_DEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <NMakeBuildCommandLine>make -f Makefile.windows</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>make rebuild -f Makefile.windows</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>make cleanall -f Makefile.windows</NMakeCleanCommandLine>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <NMakeOutput>Orbman.exe</NMakeOutput>
@@ -54,6 +57,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="opendevice.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Makefile" />
+    <None Include="Makefile.windows" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -11,7 +11,9 @@
 # on Windows with MinGW instead of editing the main Makefile.
 
 include Makefile
-
-USBFLAGS = -I/usr/local/mingw/include
-USBLIBS = -L/usr/local/mingw/lib -lusb
+USBFLAGS = -I"./../../../Libs/LibUSB-Win32/include"
+USBLIBS = -L"./../../../Libs/LibUSB-Win32/lib/gcc" -lusb
+#USBFLAGS = -I"D:/BuildOrb/Libs/libusb-compat-0.1.4/libusb"
+#USBLIBS = -L"D:/BuildOrb/Libs/libusb-compat-0.1.4/libusb" -lusb
 EXE_SUFFIX = .exe
+                                                                

@@ -21,6 +21,7 @@ EXE_SUFFIX =
 #USBLIBS = -L/usr/local/lib -lusb
 #EXE_SUFFIX = .exe
 
+BIN=./bin/
 NAME = set-led
 
 OBJECTS = opendevice.o $(NAME).o
