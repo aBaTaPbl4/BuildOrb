@@ -39,8 +39,9 @@
     <NMakeOutput>Orbman.exe</NMakeOutput>
     <NMakePreprocessorDefinitions>WIN32;_DEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
     <NMakeBuildCommandLine>make -f Makefile.windows</NMakeBuildCommandLine>
-    <NMakeReBuildCommandLine>make rebuild -f Makefile.windows</NMakeReBuildCommandLine>
-    <NMakeCleanCommandLine>make cleanall -f Makefile.windows</NMakeCleanCommandLine>
+    <NMakeReBuildCommandLine>
+    </NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>make clean -f Makefile.windows</NMakeCleanCommandLine>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <NMakeOutput>Orbman.exe</NMakeOutput>

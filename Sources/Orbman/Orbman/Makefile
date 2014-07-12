@@ -21,10 +21,11 @@ EXE_SUFFIX =
 #USBLIBS = -L/usr/local/lib -lusb
 #EXE_SUFFIX = .exe
 
-BIN=./bin/
+BIN = bin
+OBJDIR = obj
 NAME = set-led
 
-OBJECTS = opendevice.o $(NAME).o
+OBJECTS =opendevice.o $(NAME).o
 
 CC		= gcc
 CFLAGS	= $(CPPFLAGS) $(USBFLAGS) -O -g -Wall
